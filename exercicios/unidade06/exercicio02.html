@@ -4,6 +4,31 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.min.js"></script>
         <script type="text/babel">
         
+            class Poligno {
+
+                constructor (lados, altura, largura, nome) {
+                    this.lados = lados;
+                    this.altura = altura;
+                    this.largura = largura;
+                    this.nome = nome;
+                }
+
+                escreverCaracteristicas () {
+                    console.log(`Nome: ${this.nome}, lados: ${this.lados}, altura: ${this.altura}, largura: ${this.largura}`);
+                }
+            }
+
+            class Quadrado extends Poligno {
+                constructor (altura, largura) {
+                    super(4, altura, largura, 'Quadrado');
+                }
+            }
+
+            var pentagono = new Poligno(5, '5cm', '5cm', 'Pentagono');
+            pentagono.escreverCaracteristicas();
+
+            var quadrado = new Quadrado(10, 10);
+            quadrado.escreverCaracteristicas();
 
         </script>
     </head>

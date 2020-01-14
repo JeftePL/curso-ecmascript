@@ -6,7 +6,22 @@
 
         <script type="text/babel">
         
+            function* idCriador() {
+                var i = 0;
+                while(true) {
+                    yield i++;
+                }
+            }
 
+            var g = idCriador();
+
+            console.log(g.next().value);
+            console.log(g.next().value);
+            console.log(g.next().value);
+            console.log(g.next().value);
+            console.log(g.next().value);
+            console.log(g.next().value);
+            console.log(g.next().value);
 
         </script>
     </head>
